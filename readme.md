@@ -1,4 +1,4 @@
-# TTN Flevoland - Lopy, Pysense Workshop
+# TTN Flevoland - Lopy Workshop
 
 ## The Things Network
 
