@@ -1,4 +1,4 @@
-# TTN Flevoland - Lopy, Pysense Workshop
+# TTN Flevoland, Windesheim - Lopy Workshop
 
 ## The Things Network
 
@@ -6,28 +6,20 @@
 Registering your account can be done at
 https://account.thethingsnetwork.org/register
 
-If you want to chat with us request for a Slack account by pressing the [request Slack invite] link.
-
 ### Applications
-The application for this workshop can be found here:
-https://console.thethingsnetwork.org/applications/ttn-flevoland-pysense
-
-Make sure that your TTN username is connected to the 'ttn-flevoland-pysense' application.
+Create you application here:
+https://console.thethingsnetwork.org/applications/
 
 #### Application EUI
-The AppEUI: This is an Application End Device Unique Identifier used to group objects. This address, 64 bits, is used to classify the peripheral devices by application. This setting can be adjusted. The EUI 70B3D57ED0008AC8 will be used later on in our configuration.
+The AppEUI: This is an Application End Device Unique Identifier used to group objects. This address, 64 bits, is used to classify the peripheral devices by application. This setting can be adjusted.
 
 ### Devices
-The known devices registered for this application can be found here
-https://console.thethingsnetwork.org/applications/ttn-flevoland-pysense/devices
-
-#### Create a new device
-A new device can be added here.
-https://console.thethingsnetwork.org/applications/ttn-flevoland-pysense/devices/register
+Add your device to your application
+https://console.thethingsnetwork.org/applications/your-application/devices
 
 - DeviceID: A unique name
 - DeviceEUI: This identifier, factory set, makes each object unique. In principle, this setting cannot be adjusted.
-- AppKey: This is a secret key shared between the peripheral device and the network. It is used to determine the session keys. This setting can be adjusted. For this workshop the key 'FA91AF8E029ABB8E45B131FE0392F3AA' is added for all devices.
+- AppKey: This is a secret key shared between the peripheral device and the network. It is used to determine the session keys. This setting can be adjusted.
 
 ##### Retrieve the DeviceEUI
 For OTAA you can retrieve the dev_eui from the LoRa chip with the following commands:
@@ -58,19 +50,6 @@ This security measure has consequences for development devices, which often are 
 
 For the development devices the setting [Frame Counter Checks] is unchecked.
 
-## Pycom
-https://www.gitbook.com/book/pycom/pycom-documentation/details
-
-### Flash firmware
-If you need to update the firmware go to:
-https://docs.pycom.io/chapter/pytrackpysense/installation/firmware.html and install the latest version.
-Currently installed 0.0.8 firmware
-
-### Boot modes
-If errors occur or the device hangs a reset might be helpful.
-More info about resets:
-https://docs.pycom.io/chapter/toolsandfeatures/bootmodes.html
-
 #### Memory error
 If the following error occurs:
 ```python
@@ -82,31 +61,6 @@ Factory Reset the Filesystem by
 >>> import os
 >>> os.mkfs('/flash')
 ```
-
-
-## Connecting your device
-
-### Install and configure the preferred IDE
-Go to https://atom.io and download the IDE.
-
-### Install plugins
-Go to Settings and +Install
-Search for the packages
-- autocomplete-python
-- pymakr
-
-### Create an empty project
-Make sure you have created a project directory on your local machine, eg.: /home/user/projects/pycom-pysense
-In Atom add this directory by: File -> Add Project Folder
-
-### Configure the pymakr plugin
-1. Make sure the LoPy/Pysense is connected to your computer
-2. More -> Get serial ports -> copied to clipoard
-3. Settings -> Project settings -> Replace the "address" value with the clipboard contents
-4. Now you should be able to connect and upload code
-
-## API
-https://ttn-flevoland-pysense.data.thethingsnetwork.org
 
 ## References
 ### The Things Network
