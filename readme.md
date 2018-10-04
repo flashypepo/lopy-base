@@ -1,4 +1,4 @@
-# TTN Flevoland, Windesheim - Lopy Workshop
+# TTN Flevoland - Lopy Workshop
 
 ## The Things Network
 
